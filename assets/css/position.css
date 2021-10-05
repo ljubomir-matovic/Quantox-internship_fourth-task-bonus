@@ -1,0 +1,38 @@
+.hide {
+    display: none;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+/*Desktop*/
+@media screen and (min-width: 1000px) {
+    header {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+@media screen and (max-width: 999px) {
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    nav {
+        display: none;
+    }
+}

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <base target="_blank">
   <title>Simple bookmark</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/position.css">
 </head>
 <body>
+<section class="container">
   <header>
     <section class="logo-container">
       <img src="./assets/images/logo-bookmark.svg" alt="logo">
@@ -18,20 +18,32 @@
       <img src="./assets/images/icon-hamburger.svg" alt="hamburger" class="hamburger">
     </section>
     <nav>
-      <a href="">Pricing</a>
-      <a href="">Features</a>
-      <a href="">Contact</a>
-      <button class="red-button">Login</button>
+      <a>Features</a><!--href="#features"-->
+      <a>Pricing</a><!--href="#pricing"-->
+      <a>Contact</a><!--href="#contact"-->
+      <button class="red-button">LOGIN</button>
     </nav>
   </header>
+  <section class="description-container">
+    <section class="description">
+      <h1>A Simple Bookmark Manager</h1>
+      <p class="description">A clean and simple interface to organize your favourite websites. Open a new
+      browser tab and see your sites load instantly. Try it for free.</p>
+        <section class="get-it-buttons">
+          <button class="blue-button">Get it on Chrome</button>
+          <button>Get it on Firefox</button>
+        </section>
+    </section>
+    <section class="image-container">
+      <img src="./assets/images/illustration-hero.svg" alt="hero" class="description-img">
+      <div class="right-shape shape"></div>
+    </section>
+  </section>
+  
 
-  A Simple Bookmark Manager
+  
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
-
-  Get it on Chrome
-  Get it on Firefox
+ 
 
   Features
 
@@ -127,5 +139,6 @@
   Features
   Pricing
   Contact
+</section>
 </body>
 </html>

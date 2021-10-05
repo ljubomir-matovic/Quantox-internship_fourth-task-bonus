@@ -1,6 +1,15 @@
 .hide {
     display: none;
 }
+body {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    max-width: 1440px;
+    width: 100%;
+    overflow-x: hidden;
+}
 header {
     display: flex;
     flex-direction: row;
@@ -11,11 +20,22 @@ header {
     display: flex;
     align-items: center;
 }
+section.description {
+    display: flex;
+    flex-direction: column;
+}
+
 /*Desktop*/
 @media screen and (min-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
     header {
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 90%;
     }
     nav {
         display: flex;
@@ -25,6 +45,43 @@ header {
     }
     .hamburger {
         display: none;
+    }
+    .description-container {
+        max-width: 1140px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section.description {
+        width: 45%;
+        gap: 15px;
+        padding-left: 10px;
+    }
+    .description-img {
+        height: 380px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .right-shape {
+        left: 50%;
+    }
+    .left-shape {
+        right: 50%;
+    }
+    .shape {
+        position: absolute;
+        width: 1000px;
+        height: 352px;
+        background-color: var(--soft-blue);
+        border-radius: 316.5px;
+        top: 100px;
+    }
+    .image-container {
+        overflow-x: visible;
+        width: 50%;
+        height: 550px;
     }
 }
 @media screen and (max-width: 999px) {

@@ -33,22 +33,45 @@ a:hover {
     color: var(--soft-red);
 }
 button {
+    outline: none;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+    padding: 12px 30px;
+    border-width: 1px;
+}
+button:hover {
+    background-color: white;
 }
 .red-button {
-    border: 1px solid var(--soft-red);
-    border-radius: 5px;
+    border-color: var(--soft-red);
     background-color: var(--soft-red);
     color: white;
 }
 .red-button:hover {
-    background-color: white;
     color: var(--soft-red);
 }
+.blue-button {
+    border-color: var(--soft-blue);
+    background-color: var(--soft-blue);
+    color: white;
+}
+.blue-button:hover {
+    color: var(--soft-blue);
+}
+p.description {
+    opacity: 0.5;
+}
+img {
+    z-index: 1;
+}
 @media screen and (min-width: 1000px) {
-    #login {
-        text-transform: uppercase;
-        width: 111px;
-        height: 40px;
+    h1 {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -0.15px;
+        color: #242a45;
     }
 }

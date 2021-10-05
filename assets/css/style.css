@@ -2,8 +2,7 @@
 :root {
     --soft-blue: #5368df;
     --soft-red: #fa5757;
-    --grayish-blue: #9194a1;
-    --dark-blue: #252b46;
+    --grayish: #9194a1;
     --dark: #242a45;
 }
 * {
@@ -59,19 +58,40 @@ button:hover {
 .blue-button:hover {
     color: var(--soft-blue);
 }
+p {
+    color: var(--grayish);
+    text-align: center;
+}
 p.description {
-    opacity: 0.5;
+    text-align: left;
 }
 img {
     z-index: 1;
 }
-@media screen and (min-width: 1000px) {
+h1 {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.15px;
+    color: var(--dark);
+}
+h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: var(--dark);
+}
+.feature-text {
+    width: 540px;
+}
+@media screen and (max-width: 999px) {
     h1 {
-        font-family: inherit;
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 52px;
-        letter-spacing: -0.15px;
-        color: #242a45;
+        font-size: 38px;
+    }
+    .feature-text {
+        width: 80%;
     }
 }

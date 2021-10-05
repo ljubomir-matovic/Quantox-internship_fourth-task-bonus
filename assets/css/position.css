@@ -47,7 +47,7 @@ section.description {
         display: none;
     }
     .description-container {
-        max-width: 1140px;
+        max-width: 1200px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -55,6 +55,7 @@ section.description {
     }
     section.description {
         width: 45%;
+        min-width: 540px;
         gap: 15px;
         padding-left: 10px;
     }
@@ -81,7 +82,7 @@ section.description {
     .image-container {
         overflow-x: visible;
         width: 50%;
-        height: 550px;
+        height: 500px;
     }
 }
 @media screen and (max-width: 999px) {

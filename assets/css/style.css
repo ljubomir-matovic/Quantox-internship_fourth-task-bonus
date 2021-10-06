@@ -87,11 +87,72 @@ h2 {
 .feature-text {
     width: 540px;
 }
+.faq {
+    width: 540px;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 12px;
+    padding-left: 0;
+    row-gap: 10px;
+}
+.faq:first-of-type {
+    border-top: 1px solid hsl(240, 5%, 91%);
+}
+.question-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.faq img {
+    flex-grow: 0;
+    width: 10px;
+    height: 7px;
+    transition: 0.8s;
+}
+.answer {
+    max-height: 0;
+    transition: 0.8s;
+    overflow: hidden;
+    text-align: left;
+}
+.answer.active-tab {
+    max-height: 500px;
+    transition: 0.8s;
+}
+p.question {
+    font-size: 16px;
+    color: var(--dark);
+    text-align: left;
+}
+p.question:hover {
+    color: var(--soft-red);
+}
+img.question.active-tab {
+    transform: rotate(180deg);
+    transition: 0.8s;
+    filter: invert(11%) sepia(95%) saturate(7278%) hue-rotate(6deg)
+        brightness(95%) contrast(119%);
+}
 @media screen and (max-width: 999px) {
     h1 {
         font-size: 38px;
     }
     .feature-text {
         width: 80%;
+    }
+    .faq-container {
+        width: 90%;
+    }
+    .faq {
+        width: 100%;
+    }
+    header {
+        width: 100%;
     }
 }

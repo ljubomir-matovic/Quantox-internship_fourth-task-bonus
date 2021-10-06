@@ -9,6 +9,10 @@ body {
     max-width: 1440px;
     width: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 header {
     display: flex;
@@ -28,10 +32,6 @@ section.description {
 /*Desktop*/
 @media screen and (min-width: 1000px) {
     .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 50px;
     }
     header {

@@ -1,20 +1,22 @@
 let clickable = document.getElementsByClassName("question");
 const showElement = (e) => {
-    if (!e.target.classList.contains("active-tab")) {
-        let activeQuestions = document.querySelectorAll(".active-tab");
+    if (!e.target.classList.contains("active-faq")) {
+        let activeQuestions = document.querySelectorAll(".active-faq");
         [...activeQuestions].forEach((element) => {
-            element.classList.remove("active-tab");
+            element.classList.remove("active-faq");
         });
     }
-        let parent = e.target.parentElement.parentElement;
-        let classLists = [parent.querySelector("img.question").classList, parent.querySelector(".answer").classList, parent.querySelector("p.question").classList];
-        classLists.forEach((c) => {
-            if (c.contains("active-tab"))
-                c.remove("active-tab");
-            else
-                c.add("active-tab");
-        });
+    let parent = e.target.parentElement.parentElement;
+    let classLists = [
+        parent.querySelector("img.question").classList,
+        parent.querySelector(".answer").classList,
+        parent.querySelector("p.question").classList,
+    ];
+    classLists.forEach((c) => {
+        if (c.contains("active-faq")) c.remove("active-faq");
+        else c.add("active-faq");
+    });
 };
-[...clickable].forEach(element => {
+[...clickable].forEach((element) => {
     element.addEventListener("click", showElement);
 });

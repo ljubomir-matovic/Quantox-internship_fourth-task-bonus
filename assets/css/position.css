@@ -48,9 +48,8 @@ section.description {
     }
     .description-container {
         max-width: 1200px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
     }
     section.description {
@@ -60,6 +59,7 @@ section.description {
         padding-left: 10px;
     }
     .description-img {
+        max-width: 540px;
         height: 380px;
         position: absolute;
         top: 0;
@@ -81,8 +81,40 @@ section.description {
     }
     .image-container {
         overflow-x: visible;
-        width: 50%;
         height: 500px;
+    }
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid var(--border-color);
+        width: 730px;
+    }
+    .tab {
+        padding-bottom: 20px;
+        flex-grow: 1;
+        text-align: center;
+    }
+    .tab.active-tab {
+        border-bottom: 3px solid var(--soft-red);
+    }
+    .tab-target {
+        max-width: 1200px;
+        min-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: end;
+    }
+    .tab-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 445px;
+        gap: 20px;
+    }
+    .tab-text h2 {
+        text-align: left;
     }
 }
 @media screen and (max-width: 999px) {

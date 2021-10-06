@@ -85,6 +85,10 @@ h2 {
     letter-spacing: -0.1px;
     color: var(--dark);
 }
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
 .paragraph {
     width: 540px;
 }
@@ -146,6 +150,17 @@ footer {
 .tab:hover {
     cursor: pointer;
     color: var(--soft-red);
+}
+.card {
+    box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20012);
+    border-radius: 15px;
+    height: 371px;
+    width: 280px;
+    padding: 10px;
+}
+.get-it-buttons {
+    display: flex;
+    gap: 16px;
 }
 @media screen and (max-width: 999px) {
     h1 {

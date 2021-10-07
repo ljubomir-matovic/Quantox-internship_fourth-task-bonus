@@ -208,6 +208,7 @@ form {
     .description-img {
         width: 311px;
         padding-left: 10px;
+        max-height: 200px;
     }
     .description {
         justify-content: center;
@@ -257,5 +258,27 @@ form {
     }
     p:not(.faq-container p) {
         text-align: center !important;
+    }
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+    }
+    section.tab {
+        border-bottom: 1px solid var(--grayish);
+        width: 85%;
+        display: flex;
+        justify-content: center;
+    }
+    section.tab > span {
+        padding: 20px;
+    }
+    section.tab:first-of-type {
+        border-top: 1px solid var(--grayish);
+    }
+    .active-tab > span {
+        border-bottom: 3px solid var(--soft-red);
     }
 }

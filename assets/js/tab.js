@@ -10,6 +10,8 @@ const TAB_CONTENT = [{ heading: "Bookmark in one click", content: "Organize your
     {heading:"Share your bookmarks",content:"Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."}];
 const tabHandler = (e) => {
     let el = e.target;
+    if (el.tagName === "SPAN")
+        el = el.parentElement;
     let key = Number(el.getAttribute("key"));
     if (currentKey == key)
         return;

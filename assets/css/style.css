@@ -37,7 +37,6 @@ button {
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
-    padding: 12px 30px;
     border-width: 1px;
 }
 button:hover {
@@ -88,6 +87,29 @@ h2 {
 h3 {
     text-align: center;
     margin-bottom: 10px;
+}
+h4 {
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #ffffff;
+}
+.form-section {
+    background-color: var(--soft-blue);
+}
+.form-section h2 {
+    color: white;
+}
+.bar {
+    color: white;
+    background-color: var(--dark);
+}
+.right-bar > img:hover {
+    filter: invert(49%) sepia(83%) saturate(3798%) hue-rotate(333deg)
+        brightness(112%) contrast(96%);
+    cursor: pointer;
 }
 .paragraph {
     width: 540px;
@@ -162,6 +184,55 @@ footer {
     display: flex;
     gap: 16px;
 }
+input[type="email"] {
+    width: 300px;
+    height: 48px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding-right: 30px;
+    padding-left: 5px;
+}
+#submit-button {
+    width: 128px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    padding: 0;
+}
+.input-and-error p {
+    display: none;
+    color: white;
+    background-color: var(--soft-red);
+    font-style: italic;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.input-and-error.error {
+    border: 3px solid var(--soft-red);
+    border-radius: 5px;
+}
+.input-and-error.error p {
+    display: block;
+}
+.input-and-error img {
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+}
+.input-and-error.error img {
+    display: block;
+}
+@media screen and (min-width: 1000px) {
+    button {
+        padding: 12px 30px;
+    }
+}
 @media screen and (max-width: 999px) {
     h1 {
         font-size: 38px;
@@ -177,5 +248,16 @@ footer {
     }
     header {
         width: 100%;
+    }
+    form #submit-button,
+    .input-and-error {
+        width: 90%;
+        min-width: 311px;
+    }
+    .input-and-error input[type="email"] {
+        width: 100%;
+    }
+    button {
+        padding: 12px 15px;
     }
 }

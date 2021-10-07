@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 header {
     display: flex;
@@ -41,11 +42,49 @@ section.description {
     justify-content: center;
     align-items: center;
 }
+.form-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 20px;
+}
+.bar {
+    display: flex;
+}
+.right-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.shape {
+    position: absolute;
+    width: 1000px;
+    background-color: var(--soft-blue);
+    border-radius: 316.5px;
+}
+.image-container {
+    overflow-x: visible;
+}
+.faq-container + section {
+    margin-bottom: 100px;
+}
+.tab-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 445px;
+    gap: 20px;
+}
 /*Desktop*/
 @media screen and (min-width: 1000px) {
-    .container {
-        gap: 50px;
-    }
     header {
         width: 90%;
     }
@@ -84,15 +123,10 @@ section.description {
         right: 50%;
     }
     .shape {
-        position: absolute;
-        width: 1000px;
         height: 352px;
-        background-color: var(--soft-blue);
-        border-radius: 316.5px;
         top: 100px;
     }
     .image-container {
-        overflow-x: visible;
         height: 500px;
     }
     .tabs {
@@ -118,12 +152,7 @@ section.description {
         justify-items: end;
     }
     .tab-text {
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        max-width: 445px;
-        gap: 20px;
     }
     .tab-text h2 {
         text-align: left;
@@ -141,7 +170,21 @@ section.description {
     .card-container {
         height: 450px;
     }
+    .bar {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90px;
+        padding-left: 160px;
+        padding-right: 160px;
+        gap: 20px;
+    }
+    .right-bar {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
 }
+/*Mobile*/
 @media screen and (max-width: 999px) {
     header {
         padding-left: 20px;
@@ -149,5 +192,70 @@ section.description {
     }
     nav {
         display: none;
+    }
+    .form-section form {
+        flex-direction: column;
+    }
+    .description-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    .image-container {
+        order: -1;
+    }
+    .description-img {
+        width: 311px;
+        padding-left: 10px;
+    }
+    .description {
+        justify-content: center;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 20px;
+    }
+    .description > * {
+        text-align: center;
+    }
+    .shape {
+        height: 200px;
+        top: 50px;
+    }
+    .left-shape {
+        right: 50px;
+    }
+    .right-shape {
+        left: 50px;
+    }
+    .form-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .bar {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .bar > :first-child {
+        margin-bottom: 20px;
+    }
+    .right-bar {
+        margin-top: 20px;
+    }
+    .tab-target {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .tab-text {
+        align-items: center;
+    }
+    p:not(.faq-container p) {
+        text-align: center !important;
     }
 }

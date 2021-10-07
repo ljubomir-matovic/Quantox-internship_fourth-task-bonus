@@ -234,8 +234,21 @@ input[type="email"] {
     }
 }
 @media screen and (max-width: 999px) {
+    body {
+        font-size: 15px;
+        line-height: 25px;
+    }
     h1 {
-        font-size: 38px;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -0.09375px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 52px;
+        text-align: center;
+        letter-spacing: -0.075px;
     }
     .paragraph {
         width: 80%;

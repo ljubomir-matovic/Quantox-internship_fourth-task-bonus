@@ -1,18 +1,20 @@
-const MODAL_IMG = document.querySelector(".hamburger");
-const CLOSE_IMG = document.querySelector(".close");
-const BODY = document.querySelector("body");
-const MODAL = document.querySelector(".modal").classList;
-const HEADER = document.querySelector(".container > header");
-const MODAL_CLASS = "hide";
-const showModal = (e) => {
-    BODY.style.overflow = "hidden";
-    MODAL.remove(MODAL_CLASS);
-    HEADER.style.visibility="hidden";
+var modal={
+    MODAL_IMG :document.querySelector(".hamburger"),
+    CLOSE_IMG : document.querySelector(".close"),
+    BODY : document.querySelector("body"),
+    MODAL : document.querySelector(".modal").classList,
+    HEADER : document.querySelector(".container > header"),
+    MODAL_CLASS : "hide",
+    showModal(e){
+        modal.BODY.style.overflow = "hidden";
+        modal.MODAL.remove(modal.MODAL_CLASS);
+        modal.HEADER.style.visibility="hidden";
+    },
+    hideModal :(e) => {
+        modal.BODY.style.overflow = "visible";
+        modal.MODAL.add(modal.MODAL_CLASS);
+        modal.HEADER.style.visibility="visible";
+    }
 };
-const hideModal = (e) => {
-    BODY.style.overflow = "visible";
-    MODAL.add(MODAL_CLASS);
-    HEADER.style.visibility="visible";
-};
-MODAL_IMG.addEventListener("click", showModal);
-CLOSE_IMG.addEventListener("click",hideModal)
+modal.MODAL_IMG.addEventListener("click", modal.showModal);
+modal.CLOSE_IMG.addEventListener("click",modal.hideModal)
